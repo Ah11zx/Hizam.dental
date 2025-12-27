@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجمع الحزام الطبي لطب الأسنان - محايل عسير</title>
+    <meta name="description" content="مجمع الحزام الطبي لطب الأسنان في محايل عسير. نقدم أفضل خدمات علاج وتجميل الأسنان، زراعة الأسنان، والتقويم بأيدي أمهر الاستشاريين.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Open Graph Meta Tags for WhatsApp -->
+    <meta property="og:title" content="مجمع الحزام الطبي لطب الأسنان - محايل عسير">
+    <meta property="og:description" content="نقدم أفضل خدمات علاج وتجميل الأسنان، زراعة الأسنان، والتقويم بأيدي أمهر الاستشاريين في محايل عسير">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://alhizam-dental.com">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // blue-900
+                        secondary: '#0d9488', // teal-600
+                        accent: '#14b8a6', // teal-500
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+
+    <header id="main-header" class="bg-white fixed w-full z-50 py-4 top-0 left-0">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group relative z-50">
+                <img src="images/logo.png" alt="شعار مجمع الحزام الطبي" class="h-12 md:h-16 w-auto object-contain transition group-hover:scale-105">
+                <div class="hidden xs:block">
+                    <h1 class="text-lg md:text-xl font-bold text-primary leading-tight">مجمع الحزام الطبي</h1>
+                    <span class="text-xs text-gray-500 font-bold block tracking-wide">لطب الأسنان - محايل عسير</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex gap-8 font-semibold text-gray-600 items-center">
+                <a href="#home" class="hover:text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:right-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full">الرئيسية</a>
+                <a href="#about" class="hover:text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:right-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full">من نحن</a>
+                <a href="#services" class="hover:text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:right-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full">خدماتنا</a>
+                <a href="#doctors" class="hover:text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:right-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full">أطباؤنا</a>
+                <a href="#contact" class="hover:text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:right-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full">اتصل بنا</a>
+            </nav>
+
+            <div class="hidden md:flex gap-3">
+                <a href="https://wa.me/966550110046" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full transition shadow-md hover:shadow-lg text-sm font-bold flex items-center gap-2 transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> <span>واتساب</span>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-primary focus:outline-none p-2 relative z-50">
+                <i class="fa-solid fa-bars transition-all duration-300"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white shadow-xl absolute w-full left-0 top-full border-t border-gray-100">
+            <div class="flex flex-col p-4 space-y-3">
+                <a href="#home" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">الرئيسية</a>
+                <a href="#about" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">من نحن</a>
+                <a href="#services" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">خدماتنا</a>
+                <a href="#doctors" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">أطباؤنا</a>
+                <a href="#contact" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">اتصل بنا</a>
+                <hr class="border-gray-100">
+                <a href="tel:0550110046" class="block bg-secondary text-white text-center py-3 rounded-xl font-bold shadow-md active:scale-95 transition"><i class="fa-solid fa-phone"></i> اتصل الآن</a>
+                <a href="https://wa.me/966550110046" class="block bg-green-500 text-white text-center py-3 rounded-xl font-bold shadow-md active:scale-95 transition"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center text-white pt-24 pb-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 z-10 relative">
+            <span class="bg-accent/20 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full text-sm md:text-base font-bold mb-6 inline-block shadow-lg" data-aos="fade-down" data-aos-delay="100">
+                <i class="fa-solid fa-star text-yellow-300 ml-2"></i> خبرة وتميز في محايل عسير
+            </span>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight drop-shadow-md" data-aos="fade-up" data-aos-delay="200">
+                ابتسامتك المشرقة<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-white">تبدأ من هنا</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl mb-10 text-gray-100 max-w-3xl mx-auto font-light leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                في مجمع الحزام الطبي، نجمع بين الخبرة الطبية وأحدث التقنيات لنمنحك الرعاية التي تستحقها في بيئة مريحة ومعقمة.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto px-4" data-aos="fade-up" data-aos-delay="600">
+                <a href="tel:0550110046" class="bg-accent hover:bg-secondary text-white px-8 py-4 rounded-full text-lg font-bold transition flex items-center justify-center gap-3 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1 w-full sm:w-auto">
+                    <i class="fa-solid fa-phone-flip animate-pulse"></i> احجز موعدك الآن
+                </a>
+                <a href="https://share.google/gdutmDeM0M8rQZGTk" target="_blank" class="bg-white/10 backdrop-blur-md border-2 border-white/30 hover:bg-white hover:text-primary text-white px-8 py-4 rounded-full text-lg font-bold transition flex items-center justify-center gap-3 shadow-lg hover:-translate-y-1 w-full sm:w-auto">
+                    <i class="fa-solid fa-location-dot"></i> موقع العيادة
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-1">
+            <svg class="relative block w-full h-[60px] md:h-[120px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-gray-50"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="relative z-20 px-4 md:px-0 -mt-10 md:-mt-20 mb-12">
+        <div class="container mx-auto max-w-6xl bg-white rounded-2xl shadow-xl border-t-4 border-secondary p-6 md:p-10" data-aos="fade-up" data-aos-offset="-50">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-gray-100">
+                <div class="flex flex-col items-center text-center p-2 group cursor-default">
+                    <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-secondary text-2xl mb-4 group-hover:bg-secondary group-hover:text-white transition duration-300">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-primary mb-2">أوقات العمل</h3>
+                    <p class="text-sm text-gray-500">الصباح: 9:00 ص - 12:00 م</p>
+                    <p class="text-sm text-gray-500">المساء: 4:30 م - 9:30 م</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-2 pt-6 md:pt-2 group cursor-pointer" onclick="window.location.href='tel:0550110046'">
+                    <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-secondary text-2xl mb-4 group-hover:bg-secondary group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-primary mb-2">أرقام التواصل</h3>
+                    <p class="text-sm text-gray-500 font-medium" dir="ltr">017 285 0777</p>
+                    <p class="text-base text-secondary font-bold mt-1" dir="ltr">055 011 0046</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-2 pt-6 md:pt-2 group cursor-pointer" onclick="window.open('https://share.google/gdutmDeM0M8rQZGTk')">
+                    <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-secondary text-2xl mb-4 group-hover:bg-secondary group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-primary mb-2">العنوان</h3>
+                    <p class="text-sm text-gray-500">محايل عسير، الحزام</p>
+                    <p class="text-sm text-gray-500 font-semibold">مقابل الواحة مول</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+            <div class="md:w-1/2 relative" data-aos="fade-left" data-aos-duration="1000">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-dots-pattern opacity-20"></div> 
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
+                    <img src="images/about.jpg" alt="عيادة الأسنان" class="w-full h-auto transform hover:scale-105 transition duration-700">
+                    <div class="absolute bottom-0 right-0 bg-primary/90 text-white p-6 rounded-tl-3xl">
+                        <p class="text-3xl font-bold">10+</p>
+                        <p class="text-sm">سنوات من التميز</p>
+                    </div>
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-teal-50 rounded-full -z-10 blur-3xl"></div>
+            </div>
+            
+            <div class="md:w-1/2 text-right" data-aos="fade-right" data-aos-duration="1000">
+                <span class="text-secondary font-bold tracking-wider text-sm uppercase mb-2 block">من نحن</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-6 leading-tight">
+                    رعاية طبية متكاملة<br>
+                    <span class="text-accent relative inline-block">
+                        بأعلى معايير الجودة
+                        <svg class="absolute w-full h-3 -bottom-1 left-0 text-yellow-300 opacity-50" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
+                        </svg>
+                    </span>
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                    يتميز مجمع الحزام الطبي بموقعه الاستراتيجي في قلب محايل عسير، ونفخر بتقديم خدمات طبية متكاملة في مجال طب الأسنان. نحن لا نعالج الأسنان فحسب، بل نصنع الابتسامات ونعزز الثقة بالنفس من خلال فريق طبي متكامل وأجهزة هي الأحدث عالمياً.
+                </p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start gap-4 p-3 rounded-lg hover:bg-white hover:shadow-md transition duration-300">
+                        <div class="mt-1 bg-green-100 p-2 rounded-full text-green-600">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary">كادر طبي متخصص</h4>
+                            <p class="text-sm text-gray-500">نخبة من الاستشاريين والأخصائيين السعوديين والمقيمين.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-3 rounded-lg hover:bg-white hover:shadow-md transition duration-300">
+                        <div class="mt-1 bg-blue-100 p-2 rounded-full text-blue-600">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary">تكنولوجيا متطورة</h4>
+                            <p class="text-sm text-gray-500">أحدث أجهزة الأشعة والتعقيم لضمان دقة التشخيص وسلامتكم.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="inline-flex items-center justify-center border-2 border-primary text-primary px-8 py-3 rounded-full font-bold hover:bg-primary hover:text-white transition group">
+                    تواصل معنا <i class="fa-solid fa-arrow-left mr-2 group-hover:-translate-x-1 transition"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gradient-to-b from-blue-50 to-white relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">خدماتنا</span>
+                <h2 class="text-4xl font-extrabold text-primary mb-4">ماذا نقدم في مجمع الحزام؟</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">نغطي كافة احتياجاتك في طب الأسنان العلاجي والتجميلي تحت سقف واحد</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300 service-card group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-0 transition group-hover:bg-accent group-hover:scale-150 duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white shadow-md rounded-2xl flex items-center justify-center text-3xl text-secondary mb-6 group-hover:text-accent transition">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-primary transition">تجميل الأسنان</h3>
+                        <p class="text-gray-500 leading-relaxed group-hover:text-gray-600">تصميم ابتسامة هوليود، عدسات الفينير واللومينير لابتسامة مثالية وجذابة تغير حياتك.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300 service-card group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-0 transition group-hover:bg-accent group-hover:scale-150 duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white shadow-md rounded-2xl flex items-center justify-center text-3xl text-secondary mb-6 group-hover:text-accent transition">
+                            <i class="fa-solid fa-teeth-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-primary transition">زراعة وتويضات الأسنان</h3>
+                        <p class="text-gray-500 leading-relaxed group-hover:text-gray-600">حلول دائمة لتعويض الأسنان المفقودة بأفضل أنواع الزرعات السويسرية والألمانية والتيجان.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300 service-card group relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-0 transition group-hover:bg-accent group-hover:scale-150 duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white shadow-md rounded-2xl flex items-center justify-center text-3xl text-secondary mb-6 group-hover:text-accent transition">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-primary transition">تقويم الأسنان</h3>
+                        <p class="text-gray-500 leading-relaxed group-hover:text-gray-600">تقويم معدني وشفاف (Invisalign) لتعديل اصطفاف الأسنان وعلاج مشاكل الفك لجميع الأعمار.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300 service-card group relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-0 transition group-hover:bg-accent group-hover:scale-150 duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white shadow-md rounded-2xl flex items-center justify-center text-3xl text-secondary mb-6 group-hover:text-accent transition">
+                            <i class="fa-solid fa-child-reaching"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-primary transition">طب أسنان الأطفال</h3>
+                        <p class="text-gray-500 leading-relaxed group-hover:text-gray-600">بيئة مرحة وآمنة لعلاج أطفالكم، وتطبيق الفلورايد والحشوات الوقائية لحماية أسنانهم.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300 service-card group relative overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-0 transition group-hover:bg-accent group-hover:scale-150 duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white shadow-md rounded-2xl flex items-center justify-center text-3xl text-secondary mb-6 group-hover:text-accent transition">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-primary transition">علاج الجذور والحشوات</h3>
+                        <p class="text-gray-500 leading-relaxed group-hover:text-gray-600">علاج العصب بدون ألم بأحدث الأجهزة الدوارة، وحشوات تجميلية مطابقة للون الأسنان.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300 service-card group relative overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-0 transition group-hover:bg-accent group-hover:scale-150 duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white shadow-md rounded-2xl flex items-center justify-center text-3xl text-secondary mb-6 group-hover:text-accent transition">
+                            <i class="fa-solid fa-hand-holding-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-primary transition">تنظيف وتبييض الأسنان</h3>
+                        <p class="text-gray-500 leading-relaxed group-hover:text-gray-600">إزالة الجير والتصبغات العميقة، وتبييض الأسنان بأحدث تقنيات الزوم والليزر.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">فريقنا</span>
+                <h2 class="text-4xl font-extrabold text-primary mb-4">نخبة الأطباء</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">فخورون بضم كادر طبي متميز من الاستشاريين والأخصائيين ذوي الخبرة والكفاءة العالية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-80 overflow-hidden relative bg-gray-100">
+                        <img src="images/dr-ahmed.jpg" alt="د. أحمد ابو زكري" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end items-center pb-6">
+                            <a href="https://wa.me/966550110046" class="bg-white text-primary font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-secondary hover:text-white">احجز الآن</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center relative">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full border-4 border-white shadow-md z-10">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mt-6">د. أحمد ابو زكري</h3>
+                        <p class="text-accent font-semibold text-sm mb-2">نائب أول جراحة الوجه والفكين</p>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4 border-t border-gray-100 pt-3">
+                            مدرس واستشاري جراحة الفم وزراعة الأسنان<br>
+                            ماجستير ودكتوراة جراحة الفم وزراعة الأسنان - جامعة القاهرة
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-80 overflow-hidden relative bg-gray-100">
+                        <img src="images/dr-saad.jpg" alt="د. محمد سعد" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end items-center pb-6">
+                            <a href="https://wa.me/966550110046" class="bg-white text-primary font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-secondary hover:text-white">احجز الآن</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center relative">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full border-4 border-white shadow-md z-10">
+                            <i class="fa-solid fa-teeth-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mt-6">د. محمد سعد</h3>
+                        <p class="text-accent font-semibold text-sm mb-2">طبيب مقيم الاستعاضة السنية</p>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4 border-t border-gray-100 pt-3">
+                            التركيبات الثابتة والمتحركة، تركيبات تجميلية للأسنان الامامية وتركيبات الزيركون والبورسلين<br>
+                            عدسات الأسنان (الفينير)، التبييض، وترميم الأسنان
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-80 overflow-hidden relative bg-gray-100">
+                        <img src="images/dr-ali.jpg" alt="د. محمد علي" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end items-center pb-6">
+                            <a href="https://wa.me/966550110046" class="bg-white text-primary font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-secondary hover:text-white">احجز الآن</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center relative">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full border-4 border-white shadow-md z-10">
+                            <i class="fa-solid fa-x-ray"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mt-6">د. محمد علي</h3>
+                        <p class="text-accent font-semibold text-sm mb-2">نائب تقويم الأسنان</p>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4 border-t border-gray-100 pt-3">
+                            أحدث أجهزة تقويم الأسنان، علاج سوء الإطباق<br>
+                            علاج المشاكل الهيكلية، علاج تزاحم الاسنان وبروزها، التقويم الثابت والمتحرك
+                        </p>
+                    </div>
+                </div>
+
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-80 overflow-hidden relative bg-gray-100">
+                        <img src="images/dr-female.png" alt="د. نسرين نصر" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end items-center pb-6">
+                            <a href="https://wa.me/966550110046" class="bg-white text-primary font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-secondary hover:text-white">احجز الآن</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center relative">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full border-4 border-white shadow-md z-10">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mt-6">د. نسرين نصر</h3>
+                        <p class="text-accent font-semibold text-sm mb-2">طبيبة أسنان</p>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4 border-t border-gray-100 pt-3">
+                            علاج العصب ، الحشوات ،خلع الأسنان، تنظيف الأسنان، العنايه بأسنان الأطفال ،
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-80 overflow-hidden relative bg-gray-100">
+                        <img src="images/dr-female.png" alt="د. بلسم علي الألمعي" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end items-center pb-6">
+                            <a href="https://wa.me/966550110046" class="bg-white text-primary font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition duration-300 hover:bg-secondary hover:text-white">احجز الآن</a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center relative">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full border-4 border-white shadow-md z-10">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mt-6">د. بلسم علي الألمعي</h3>
+                        <p class="text-accent font-semibold text-sm mb-2">طبيبة أسنان</p>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4 border-t border-gray-100 pt-3">
+                            علاج العصب ، الحشوات ،خلع الأسنان، تنظيف الأسنان، العنايه بأسنان الأطفال ،
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-y border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8" data-aos="fade-in">تابعونا على وسائل التواصل الاجتماعي</h3>
+            <div class="flex flex-wrap justify-center gap-8" data-aos="zoom-in">
+                
+                <a href="https://www.instagram.com/alhizam_dental?igsh=MW5mMmc4cjBveGFoNA==" target="_blank" class="flex flex-col items-center gap-3 group">
+                    <div class="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition duration-300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <span class="text-sm font-bold text-gray-600 group-hover:text-pink-600 transition">Instagram</span>
+                </a>
+
+                <a href="https://www.tiktok.com/@alhizam_dental?_r=1&_t=ZS-929wUI0YAmO" target="_blank" class="flex flex-col items-center gap-3 group">
+                    <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition duration-300">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <span class="text-sm font-bold text-gray-600 group-hover:text-black transition">TikTok</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-3 group">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition duration-300">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <span class="text-sm font-bold text-gray-600 group-hover:text-blue-600 transition">Facebook</span>
+                </a>
+
+                <a href="https://wa.me/966550110046" class="flex flex-col items-center gap-3 group">
+                    <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition duration-300">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <span class="text-sm font-bold text-gray-600 group-hover:text-green-600 transition">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-white pt-20 pb-10 rounded-t-[3rem] mt-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+            
+            <div data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="bg-white p-2 rounded-xl">
+                        <img src="images/logo.png" alt="شعار مجمع الحزام الطبي" class="h-10 w-auto object-contain">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">مجمع الحزام الطبي</h3>
+                        <span class="text-xs text-gray-400 font-normal">رعاية طبية تثق بها</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6 leading-relaxed text-sm">وجهتكم الأولى للعناية بصحة الفم والأسنان في محايل عسير. نسعد بخدمتكم وتوفير الراحة التامة لكم بأحدث التقنيات.</p>
+                <div class="flex gap-4">
+                    <a href="mailto:fayiz@alhizam-center.com" class="bg-gray-800 hover:bg-secondary w-10 h-10 flex items-center justify-center rounded-full transition">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/966550110046" class="bg-gray-800 hover:bg-green-500 w-10 h-10 flex items-center justify-center rounded-full transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-lg font-bold mb-6 text-white border-r-4 border-secondary pr-3">معلومات التواصل</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 group">
+                        <div class="mt-1 w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-location-dot text-sm"></i>
+                        </div>
+                        <span class="text-gray-300 text-sm mt-1.5">محايل عسير، الحزام، مقابل الواحة مول</span>
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-phone text-sm"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">الثابت</span>
+                            <a href="tel:0172850777" class="hover:text-secondary text-left text-gray-300 transition" dir="ltr">017 285 0777</a>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">الجوال / واتساب</span>
+                            <a href="https://wa.me/966550110046" class="hover:text-secondary text-left text-gray-300 transition" dir="ltr">055 011 0046</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-lg font-bold mb-6 text-white border-r-4 border-secondary pr-3">موقعنا</h3>
+                <div class="bg-gray-800 p-2 rounded-xl shadow-inner">
+                    <a href="https://share.google/gdutmDeM0M8rQZGTk" target="_blank" class="block w-full h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center group hover:bg-gray-600 transition border border-gray-600 overflow-hidden relative">
+                        <img src="images/map-bg.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+                        <i class="fa-solid fa-location-arrow text-2xl text-secondary mb-2 z-10 drop-shadow-md"></i>
+                        <span class="font-bold text-sm z-10 drop-shadow-md">افتح الموقع في Google Maps</span>
+                    </a>
+                </div>
+                <div class="mt-6 border-t border-gray-800 pt-4">
+                     <h4 class="font-bold text-sm text-gray-300 mb-2">ساعات العمل:</h4>
+                     <div class="flex justify-between text-xs text-gray-400 mb-1">
+                         <span>الصباح:</span> <span class="text-white">9:00 ص - 12:00 م</span>
+                     </div>
+                     <div class="flex justify-between text-xs text-gray-400">
+                         <span>المساء:</span> <span class="text-white">4:30 م - 9:30 م</span>
+                     </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-xs">
+            &copy; 2024 مجمع الحزام الطبي لطب الأسنان. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
