@@ -12,14 +12,25 @@ AOS.init({
 
 // 2. Sticky Header Logic (جعل القائمة العلوية تلتصق وتتغير عند النزول)
 const header = document.getElementById('main-header');
+const headerLogo = document.getElementById('header-logo');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        header.classList.add('bg-white', 'shadow-[0_4px_20px_rgba(0,0,0,0.05)]', 'rounded-b-3xl');
-        header.classList.remove('py-4', 'bg-transparent');
+        // تحويل الهيدر إلى شكل نحيف وشفاف
+        header.classList.remove('bg-gradient-to-b', 'from-black/40', 'to-transparent', 'py-6');
+        header.classList.add('bg-white/60', 'backdrop-blur-xl', 'shadow-sm', 'py-2');
+
+        // تصغير الشعار
+        headerLogo.classList.remove('h-20', 'md:h-28');
+        headerLogo.classList.add('h-10');
     } else {
-        header.classList.remove('bg-white', 'shadow-[0_4px_20px_rgba(0,0,0,0.05)]');
-        header.classList.add('py-4', 'bg-transparent');
+        // إعادة الهيدر للحالة الأصلية
+        header.classList.remove('bg-white/60', 'backdrop-blur-xl', 'shadow-sm', 'py-2');
+        header.classList.add('bg-gradient-to-b', 'from-black/40', 'to-transparent', 'py-6');
+
+        // إعادة الشعار لحجمه الأصلي
+        headerLogo.classList.remove('h-10');
+        headerLogo.classList.add('h-20', 'md:h-28');
     }
 });
 
