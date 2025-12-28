@@ -18,14 +18,14 @@ window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         // تحويل الهيدر إلى شكل نحيف جداً وزجاجي شفاف
         header.classList.remove('bg-gradient-to-b', 'from-black/40', 'to-transparent', 'py-6');
-        header.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-1');
+        header.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-1', 'border-b', 'border-gray-200/50');
 
         // تصغير الشعار بشكل ملحوظ ليناسب الشريط النحيف
         headerLogo.classList.remove('h-20', 'md:h-28');
         headerLogo.classList.add('h-8');
     } else {
         // إعادة الهيدر للحالة الأصلية الكبيرة المريحة
-        header.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-1');
+        header.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-1', 'border-b', 'border-gray-200/50');
         header.classList.add('bg-gradient-to-b', 'from-black/40', 'to-transparent', 'py-6');
 
         // إعادة الشعار لحجمه الكبير الواضح
