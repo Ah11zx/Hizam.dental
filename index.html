@@ -78,16 +78,57 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="md:hidden bg-white shadow-xl absolute w-full left-0 top-full border-t border-gray-100">
-            <div class="flex flex-col p-4 space-y-3">
-                <a href="#home" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">الرئيسية</a>
-                <a href="#about" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">من نحن</a>
-                <a href="#services" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">خدماتنا</a>
-                <a href="#doctors" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">أطباؤنا</a>
-                <a href="#contact" class="block hover:text-secondary hover:bg-gray-50 px-4 py-2 rounded-lg font-bold transition">اتصل بنا</a>
-                <hr class="border-gray-100">
-                <a href="tel:0550110046" class="block bg-secondary text-white text-center py-3 rounded-xl font-bold shadow-md active:scale-95 transition"><i class="fa-solid fa-phone"></i> اتصل الآن</a>
-                <a href="https://wa.me/966550110046" class="block bg-green-500 text-white text-center py-3 rounded-xl font-bold shadow-md active:scale-95 transition"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+        <div id="mobile-menu" class="md:hidden bg-slate-900/98 backdrop-blur-xl border-t border-white/10 shadow-2xl absolute w-full left-0 top-full">
+            <div class="flex flex-col p-6 space-y-4">
+                <!-- روابط القائمة مع الأيقونات -->
+                <a href="#home" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                    <i class="fa-solid fa-home w-5 text-center"></i>
+                    <span>الرئيسية</span>
+                </a>
+
+                <a href="#about" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                    <i class="fa-solid fa-info-circle w-5 text-center"></i>
+                    <span>من نحن</span>
+                </a>
+
+                <a href="#services" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                    <i class="fa-solid fa-tooth w-5 text-center"></i>
+                    <span>خدماتنا</span>
+                </a>
+
+                <a href="#offers" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                    <i class="fa-solid fa-tags w-5 text-center"></i>
+                    <span>العروض</span>
+                </a>
+
+                <a href="#doctors" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                    <i class="fa-solid fa-user-doctor w-5 text-center"></i>
+                    <span>أطباؤنا</span>
+                </a>
+
+                <a href="#" onclick="alert('سيتم فتح نموذج الشكاوى والاقتراحات قريباً'); return false;" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                    <i class="fa-solid fa-comment-dots w-5 text-center"></i>
+                    <span>الشكاوى والاقتراحات</span>
+                </a>
+
+                <a href="#contact" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                    <i class="fa-solid fa-phone w-5 text-center"></i>
+                    <span>📞 اتصل بنا</span>
+                </a>
+
+                <!-- خط فاصل -->
+                <div class="border-t border-white/10 my-2"></div>
+
+                <!-- أزرار الاتصال والواتساب بتصميم Outline -->
+                <a href="tel:0550110046" class="flex items-center justify-center gap-2 border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white text-center py-3 px-6 rounded-full font-bold transition-all duration-300 active:scale-95 shadow-lg shadow-teal-500/20">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>اتصل الآن</span>
+                </a>
+
+                <a href="https://wa.me/966550110046" class="flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-center py-3 px-6 rounded-full font-bold transition-all duration-300 active:scale-95 shadow-lg shadow-green-500/30">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>واتساب</span>
+                </a>
             </div>
         </div>
     </header>
@@ -148,7 +189,7 @@
     </section>
 
     <!-- Offers Section -->
-    <section class="bg-slate-50 py-16">
+    <section id="offers" class="bg-slate-50 py-16">
         <div class="container mx-auto px-4">
             <!-- Section Header -->
             <div class="text-center mb-12" data-aos="fade-up">
