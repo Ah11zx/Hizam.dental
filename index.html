@@ -47,7 +47,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased font-sans">
 
-    <header id="main-header" class="bg-transparent fixed w-full z-50 py-4 top-0 left-0">
+    <header id="main-header" class="bg-transparent fixed w-full z-50 py-4 top-0 left-0 rounded-b-3xl">
         <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3 group relative z-50">
                 <img src="images/logo.png" alt="شعار مجمع الحزام الطبي" class="h-12 md:h-16 w-auto object-contain transition group-hover:scale-105">
@@ -71,9 +71,14 @@
                 </a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-sm text-primary hover:bg-white transition-all focus:outline-none relative z-50">
-                <i class="fa-solid fa-bars transition-all duration-300"></i>
-            </button>
+            <div class="md:hidden flex gap-3 items-center">
+                <button id="lang-switch-btn" class="bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-sm text-primary hover:bg-white transition-all focus:outline-none relative z-50 flex items-center gap-2 text-sm font-bold">
+                    <i class="fa-solid fa-globe"></i> <span id="lang-text">EN</span>
+                </button>
+                <button id="mobile-menu-btn" class="bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-sm text-primary hover:bg-white transition-all focus:outline-none relative z-50">
+                    <i class="fa-solid fa-bars transition-all duration-300"></i>
+                </button>
+            </div>
         </div>
 
         <div id="mobile-menu" class="md:hidden bg-white shadow-xl absolute w-full left-0 top-full border-t border-gray-100">
