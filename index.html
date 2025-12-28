@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="md:hidden bg-slate-900/98 backdrop-blur-xl border-t border-white/10 shadow-2xl absolute w-full left-0 top-full">
+        <div id="mobile-menu" class="md:hidden bg-slate-900 shadow-2xl border-t border-white/10 absolute w-full left-0 top-full">
             <div class="flex flex-col p-6 space-y-4">
                 <!-- روابط القائمة مع الأيقونات -->
                 <a href="#home" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
@@ -599,7 +599,7 @@
         <div class="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
         <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
 
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
             
             <div data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center gap-3 mb-6">
@@ -652,8 +652,27 @@
                 </ul>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-lg font-bold mb-6 text-white border-r-4 border-secondary pr-3">موقعنا</h3>
+        </div>
+
+        <!-- Customer Care Section (صوتك مسموع) -->
+        <div class="container mx-auto px-4 my-8 relative z-10">
+            <div class="bg-gradient-to-r from-teal-600 to-blue-600 rounded-2xl p-8 text-center shadow-2xl" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <i class="fa-solid fa-comments text-4xl text-white"></i>
+                    <h3 class="text-3xl font-extrabold text-white">صوتك مسموع</h3>
+                </div>
+                <p class="text-white/90 text-sm mb-6 max-w-2xl mx-auto">رضاكم هو أولويتنا. شاركنا ملاحظاتك وأفكارك لتحسين خدماتنا</p>
+                <button id="openFeedbackModal" class="bg-white text-teal-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3">
+                    <i class="fa-solid fa-envelope-open-text text-xl"></i>
+                    تقديم شكوى أو اقتراح
+                </button>
+            </div>
+        </div>
+
+        <!-- Map Section (موقع العيادة) -->
+        <div class="container mx-auto px-4 my-8 relative z-10" data-aos="fade-up">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-lg font-bold mb-6 text-white border-r-4 border-secondary pr-3">موقع العيادة</h3>
                 <div class="bg-gray-800 p-2 rounded-xl shadow-inner h-64 overflow-hidden">
                     <iframe
                         width="100%"
@@ -674,22 +693,6 @@
                          <span>المساء:</span> <span class="text-white">4:30 م - 9:30 م</span>
                      </div>
                 </div>
-            </div>
-
-        </div>
-
-        <!-- Customer Care Section (صوتك مسموع) -->
-        <div class="container mx-auto px-4 mt-16 mb-12 relative z-10">
-            <div class="bg-gradient-to-r from-teal-600 to-blue-600 rounded-2xl p-8 text-center shadow-2xl" data-aos="fade-up">
-                <div class="flex items-center justify-center gap-3 mb-4">
-                    <i class="fa-solid fa-comments text-4xl text-white"></i>
-                    <h3 class="text-3xl font-extrabold text-white">صوتك مسموع</h3>
-                </div>
-                <p class="text-white/90 text-sm mb-6 max-w-2xl mx-auto">رضاكم هو أولويتنا. شاركنا ملاحظاتك وأفكارك لتحسين خدماتنا</p>
-                <button id="openFeedbackModal" class="bg-white text-teal-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3">
-                    <i class="fa-solid fa-envelope-open-text text-xl"></i>
-                    تقديم شكوى أو اقتراح
-                </button>
             </div>
         </div>
 
