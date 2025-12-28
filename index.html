@@ -106,7 +106,7 @@
                     <span>أطباؤنا</span>
                 </a>
 
-                <a href="#" onclick="alert('سيتم فتح نموذج الشكاوى والاقتراحات قريباً'); return false;" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
+                <a href="#" id="openFeedbackModalMobile" class="flex items-center gap-3 text-gray-100 hover:text-teal-400 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-white/5">
                     <i class="fa-solid fa-comment-dots w-5 text-center"></i>
                     <span>الشكاوى والاقتراحات</span>
                 </a>
@@ -677,10 +677,92 @@
             </div>
 
         </div>
+
+        <!-- Customer Care Section (صوتك مسموع) -->
+        <div class="container mx-auto px-4 mt-16 mb-12 relative z-10">
+            <div class="bg-gradient-to-r from-teal-600 to-blue-600 rounded-2xl p-8 text-center shadow-2xl" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <i class="fa-solid fa-comments text-4xl text-white"></i>
+                    <h3 class="text-3xl font-extrabold text-white">صوتك مسموع</h3>
+                </div>
+                <p class="text-white/90 text-sm mb-6 max-w-2xl mx-auto">رضاكم هو أولويتنا. شاركنا ملاحظاتك وأفكارك لتحسين خدماتنا</p>
+                <button id="openFeedbackModal" class="bg-white text-teal-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-3">
+                    <i class="fa-solid fa-envelope-open-text text-xl"></i>
+                    تقديم شكوى أو اقتراح
+                </button>
+            </div>
+        </div>
+
         <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-xs">
             &copy; 2024 مجمع الحزام الطبي لطب الأسنان. جميع الحقوق محفوظة.
         </div>
     </footer>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300" id="feedbackModalContent">
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-teal-600 to-blue-600 p-6 rounded-t-3xl relative">
+                <button id="closeFeedbackModal" class="absolute top-4 left-4 text-white/80 hover:text-white text-2xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/20 transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fa-solid fa-envelope-open-text text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-white">مركز العناية بالعميل</h3>
+                    <p class="text-white/90 text-sm mt-2">نحن نهتم برأيك وملاحظاتك</p>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <form id="feedbackForm" class="p-6 space-y-5">
+                <!-- Name Field -->
+                <div>
+                    <label for="customerName" class="block text-gray-700 font-bold mb-2 text-sm">
+                        <i class="fa-solid fa-user text-teal-600 ml-2"></i>الاسم
+                    </label>
+                    <input type="text" id="customerName" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition" placeholder="أدخل اسمك الكريم">
+                </div>
+
+                <!-- Phone Field -->
+                <div>
+                    <label for="customerPhone" class="block text-gray-700 font-bold mb-2 text-sm">
+                        <i class="fa-solid fa-phone text-teal-600 ml-2"></i>رقم الجوال
+                    </label>
+                    <input type="tel" id="customerPhone" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition" placeholder="05XXXXXXXX" dir="ltr">
+                </div>
+
+                <!-- Message Type -->
+                <div>
+                    <label for="messageType" class="block text-gray-700 font-bold mb-2 text-sm">
+                        <i class="fa-solid fa-list text-teal-600 ml-2"></i>نوع الرسالة
+                    </label>
+                    <select id="messageType" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition bg-white">
+                        <option value="">اختر نوع الرسالة</option>
+                        <option value="شكوى">شكوى</option>
+                        <option value="اقتراح">اقتراح</option>
+                        <option value="شكر">شكر</option>
+                        <option value="أخرى">أخرى</option>
+                    </select>
+                </div>
+
+                <!-- Message Text -->
+                <div>
+                    <label for="messageText" class="block text-gray-700 font-bold mb-2 text-sm">
+                        <i class="fa-solid fa-message text-teal-600 ml-2"></i>نص الرسالة
+                    </label>
+                    <textarea id="messageText" required rows="5" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition resize-none" placeholder="اكتب رسالتك هنا..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    إرسال للإدارة مباشرة
+                </button>
+            </form>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

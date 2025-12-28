@@ -60,3 +60,102 @@ menu.querySelectorAll('a').forEach(link => {
         icon.classList.add('fa-bars');
     });
 });
+
+// 4. Feedback Modal Logic (التحكم في نافذة الشكاوى والاقتراحات)
+const feedbackModal = document.getElementById('feedbackModal');
+const feedbackModalContent = document.getElementById('feedbackModalContent');
+const openFeedbackBtn = document.getElementById('openFeedbackModal');
+const closeFeedbackBtn = document.getElementById('closeFeedbackModal');
+const feedbackForm = document.getElementById('feedbackForm');
+
+// فتح النافذة المنبثقة
+function openFeedbackModal() {
+    feedbackModal.classList.remove('hidden');
+    feedbackModal.classList.add('flex');
+    // انتظار قليل ثم إضافة التأثيرات
+    setTimeout(() => {
+        feedbackModalContent.classList.remove('scale-95', 'opacity-0');
+        feedbackModalContent.classList.add('scale-100', 'opacity-100');
+    }, 10);
+}
+
+// إغلاق النافذة المنبثقة
+function closeFeedbackModal() {
+    feedbackModalContent.classList.remove('scale-100', 'opacity-100');
+    feedbackModalContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+        feedbackModal.classList.remove('flex');
+        feedbackModal.classList.add('hidden');
+    }, 300);
+}
+
+// ربط الأزرار بالدوال
+openFeedbackBtn.addEventListener('click', openFeedbackModal);
+closeFeedbackBtn.addEventListener('click', closeFeedbackModal);
+
+// ربط زر القائمة المحمولة
+const openFeedbackMobileBtn = document.getElementById('openFeedbackModalMobile');
+if (openFeedbackMobileBtn) {
+    openFeedbackMobileBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // إغلاق القائمة المحمولة
+        menu.classList.remove('active');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+        // فتح modal الشكاوى
+        openFeedbackModal();
+    });
+}
+
+// إغلاق عند الضغط على الخلفية المعتمة
+feedbackModal.addEventListener('click', (e) => {
+    if (e.target === feedbackModal) {
+        closeFeedbackModal();
+    }
+});
+
+// إرسال النموذج عبر الإيميل
+feedbackForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // الحصول على البيانات من النموذج
+    const name = document.getElementById('customerName').value;
+    const phone = document.getElementById('customerPhone').value;
+    const type = document.getElementById('messageType').value;
+    const message = document.getElementById('messageText').value;
+
+    // تنسيق العنوان
+    const subject = `${type} جديدة من ${name}`;
+
+    // تنسيق نص الرسالة
+    const body = `
+السلام عليكم ورحمة الله وبركاته،
+
+تم استلام ${type} جديدة من موقع مجمع الحزام الطبي:
+
+----------------------------------------
+الاسم: ${name}
+رقم الجوال: ${phone}
+نوع الرسالة: ${type}
+----------------------------------------
+
+الرسالة:
+${message}
+
+----------------------------------------
+تم الإرسال من: موقع مجمع الحزام الطبي
+التاريخ: ${new Date().toLocaleDateString('ar-SA')}
+    `.trim();
+
+    // إنشاء رابط mailto
+    const mailtoLink = `mailto:info@hizam.dental?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // فتح تطبيق الإيميل
+    window.location.href = mailtoLink;
+
+    // إغلاق النافذة بعد ثانية
+    setTimeout(() => {
+        closeFeedbackModal();
+        feedbackForm.reset();
+    }, 1000);
+});
