@@ -148,7 +148,7 @@ ${message}
     `.trim();
 
     // إنشاء رابط mailto
-    const mailtoLink = `mailto:info@hizam.dental?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:fayiz@alhizam-center.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     // فتح تطبيق الإيميل
     window.location.href = mailtoLink;
