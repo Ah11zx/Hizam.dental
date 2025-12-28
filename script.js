@@ -49,25 +49,3 @@ menu.querySelectorAll('a').forEach(link => {
         icon.classList.add('fa-bars');
     });
 });
-
-// 4. Language Switch Logic (التحكم في تبديل اللغة)
-const langBtn = document.getElementById('lang-switch-btn');
-const langText = document.getElementById('lang-text');
-const htmlElement = document.documentElement;
-
-langBtn.addEventListener('click', () => {
-    // التحقق من اللغة الحالية
-    const currentLang = htmlElement.getAttribute('lang');
-
-    if (currentLang === 'ar') {
-        // التبديل إلى الإنجليزية
-        htmlElement.setAttribute('lang', 'en');
-        htmlElement.setAttribute('dir', 'ltr');
-        langText.textContent = 'عربي';
-    } else {
-        // التبديل إلى العربية
-        htmlElement.setAttribute('lang', 'ar');
-        htmlElement.setAttribute('dir', 'rtl');
-        langText.textContent = 'EN';
-    }
-});
