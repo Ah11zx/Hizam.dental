@@ -16,20 +16,20 @@ const headerLogo = document.getElementById('header-logo');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        // تحويل الهيدر إلى شكل نحيف وشفاف
+        // تحويل الهيدر إلى شكل نحيف جداً وزجاجي شفاف
         header.classList.remove('bg-gradient-to-b', 'from-black/40', 'to-transparent', 'py-6');
-        header.classList.add('bg-white/60', 'backdrop-blur-xl', 'shadow-sm', 'py-2');
+        header.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-1');
 
-        // تصغير الشعار
+        // تصغير الشعار بشكل ملحوظ ليناسب الشريط النحيف
         headerLogo.classList.remove('h-20', 'md:h-28');
-        headerLogo.classList.add('h-10');
+        headerLogo.classList.add('h-8');
     } else {
-        // إعادة الهيدر للحالة الأصلية
-        header.classList.remove('bg-white/60', 'backdrop-blur-xl', 'shadow-sm', 'py-2');
+        // إعادة الهيدر للحالة الأصلية الكبيرة المريحة
+        header.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-1');
         header.classList.add('bg-gradient-to-b', 'from-black/40', 'to-transparent', 'py-6');
 
-        // إعادة الشعار لحجمه الأصلي
-        headerLogo.classList.remove('h-10');
+        // إعادة الشعار لحجمه الكبير الواضح
+        headerLogo.classList.remove('h-8');
         headerLogo.classList.add('h-20', 'md:h-28');
     }
 });
