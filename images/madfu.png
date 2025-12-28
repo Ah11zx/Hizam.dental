@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <title>Madfu</title>
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-16577431265"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'AW-16577431265');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PBPML5K5');
+    </script>
+    <!-- End Google Tag Manager -->
+  <link rel="stylesheet" href="styles.css"></head>
+  <body>
+    <app-root></app-root>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PBPML5K5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  <link rel="modulepreload" href="chunk-TOFQGCEH.js"><link rel="modulepreload" href="chunk-JTCARFRA.js"><link rel="modulepreload" href="chunk-WUHDKUOG.js"><link rel="modulepreload" href="chunk-QHZMXMYK.js"><link rel="modulepreload" href="chunk-LGV45QEQ.js"><link rel="modulepreload" href="chunk-ZB5JN4KS.js"><link rel="modulepreload" href="chunk-OZBZIL4E.js"><link rel="modulepreload" href="chunk-L5E2342J.js"><link rel="modulepreload" href="chunk-ELI6KW46.js"><link rel="modulepreload" href="chunk-UCRELAR4.js"><script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script></body>
+</html>
