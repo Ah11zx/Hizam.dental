@@ -68,3 +68,73 @@ header.scrolled {
     max-height: 400px;
     opacity: 1;
 }
+
+/* Floating Effect للصور في الهيرو */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Shine Effect لأيقونات الخدمات */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(200%) rotate(45deg);
+    }
+}
+
+.service-icon-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-icon-shine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    animation: shine 5s infinite;
+}
+
+/* WhatsApp Shake Animation - تأثير اهتزاز زر الواتساب */
+@keyframes whatsapp-shake {
+    0%, 90%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    91% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+    93% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    95% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+    97% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    99% {
+        transform: scale(1.05) rotate(0deg);
+    }
+}
+
+.whatsapp-pulse {
+    animation: whatsapp-shake 10s ease-in-out infinite;
+}

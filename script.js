@@ -6,7 +6,7 @@
 AOS.init({
     once: true, // Animation happens only once
     offset: 100, // Offset from the original trigger point
-    duration: 800, // Duration of animation
+    duration: 1000, // Duration of animation
     easing: 'ease-out-cubic',
 });
 
